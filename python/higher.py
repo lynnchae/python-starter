@@ -34,3 +34,25 @@ for k, v in dicts.items():
 
 for s in 'ABCD':
     print(s)
+
+print([x * x for x in list(range(1, 11))])
+
+lists = ["Hello", "Python", 19]
+
+print([x.lower() for x in lists if isinstance(x, str)])
+
+'''a, b = b, a + b 先计算右边运算，然后再赋值
+   a = b , b = a + b 输出结果就不同了
+'''
+
+
+def fib(val):
+    n, a, b = 0, 0, 1
+    while n < val:
+        yield b
+        a, b = b, a + b
+        n = n + 1
+    return 'done'
+
+
+print([x for x in fib(3)])
