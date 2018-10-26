@@ -3,10 +3,8 @@
 
 __author__ = 'Cailinfeng'
 
-
 import pytesseract
 from PIL import Image
 
-
-im = Image.open(r'a.jpg')
-print(pytesseract.image_to_string(im))
+im = Image.open(r'c.jpg')
+print(pytesseract.image_to_string(im, lang='chi_sim'))
