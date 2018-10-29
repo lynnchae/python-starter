@@ -57,6 +57,8 @@ def progress(percent, width=50):
 
 
 if __name__ == '__main__':
+    if not os.path.exists('./txt'):
+        os.mkdir('./txt')
     for x in [z for z in os.listdir('./txt/') if os.path.isfile('./txt/'+z) and os.path.splitext(z)[1] == '.txt']:
         os.remove('./txt/' + x)
     print('《凡人修仙传》前十章开始下载：')
