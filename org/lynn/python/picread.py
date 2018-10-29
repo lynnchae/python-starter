@@ -6,5 +6,5 @@ __author__ = 'Cailinfeng'
 import pytesseract
 from PIL import Image
 
-im = Image.open(r'./pic/e.jpg')
+im = Image.open(r'./pic/c.jpg')
 print(pytesseract.image_to_string(im, lang='chi_sim'))
