@@ -3,7 +3,7 @@
 
 __author__ = 'Cailinfeng'
 
-import sys, time, os, requests
+import sys, os, requests
 from bs4 import BeautifulSoup
 
 domain = 'https://www.biqukan.com'
@@ -60,7 +60,6 @@ if __name__ == '__main__':
     for x in [z for z in os.listdir('./txt/') if os.path.isfile('./txt/'+z) and os.path.splitext(z)[1] == '.txt']:
         os.remove('./txt/' + x)
     print('《凡人修仙传》前十章开始下载：')
-    time.sleep(20)
     Novels(novel_fanren)
     for index, url in enumerate(novel_chaper_urls):
         novel = Novel(url)
