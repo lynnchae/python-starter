@@ -28,6 +28,7 @@ class UnsplashCrawler(object):
             download_size) + '&order_by=latest').replace('xxx', catory.value)
         self.down_url = 'https://unsplash.com/photos/xxx/download?force=true'
 
+
     def get_pic_ids(self):
         req = requests.get(self.pic_json_url)
         self.ids = []
