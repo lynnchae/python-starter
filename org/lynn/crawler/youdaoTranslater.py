@@ -13,6 +13,7 @@ if __name__ == '__main__':
         有道翻译：2018-10-30 可用
     '''
     totrans = input('翻译：')
+    starttime = time.time()
     trans_url = 'http://fanyi.youdao.com/translate'
     form_data = {}
 
@@ -55,4 +56,6 @@ if __name__ == '__main__':
     # 找到翻译结果
     translate_results = translate_results['translateResult'][0][0]['tgt']
     # 打印翻译信息
+    endtime = time.time()
     print("翻译结果：%s" % translate_results)
+    print("[%.3f s]" % ((endtime-starttime)))
