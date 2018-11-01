@@ -53,4 +53,7 @@ aTuple = ('Job', 'Age', 'Height')
 # 只有1个元素的tuple定义时必须加一个逗号,
 bTuple = (1,)
 
-
+for i in range(10):
+    for j in range(1, i + 1):
+        print('%s * %s = %s ' % (j, i, j * i), end=" ")
+    print()
